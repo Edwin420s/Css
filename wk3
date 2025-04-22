@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Example</title>
+    <style>
+        /* Internal CSS */
+        /* Styling the body */
+        body {
+            font-family: 'Arial', sans-serif; /* Different font */
+            background-color: #f4f4f4; /* Light background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling a class - .header */
+        .header {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        /* Styling an ID - #image */
+        #image {
+            width: 100%;
+            max-width: 600px; /* Max width of image */
+            border: 5px solid #333; /* Border around image */
+            padding: 10px; /* Padding inside the border */
+            margin: 20px auto; /* Centering the image with margin */
+        }
+
+        /* Styling links using selector */
+        a {
+            color: #0066cc; /* Link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff6600; /* Hover effect on links */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to My Page!</h1>
+    </div>
+
+    <!-- Image with ID selector -->
+    <img id="image" src="https://via.placeholder.com/600" alt="Placeholder Image">
+
+    <p>
+        Check out this <a href="#">cool link</a> for more information.
+    </p>
+
+</body>
+</html>
