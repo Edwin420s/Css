@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript and DOM Manipulation</title>
+    <style>
+        /* Optional: Initial styling for the elements */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #text-content {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to JavaScript and DOM Manipulation!</h1>
+    </header>
+
+    <section>
+        <p id="text-content">This is a paragraph that will be changed dynamically using JavaScript.</p>
+        <button id="change-text-button">Change Text</button>
+    </section>
+
+    <section>
+        <h2>Click the button below to change the style of the text:</h2>
+        <button id="change-style-button">Change Style</button>
+    </section>
+
+    <section>
+        <h2>Click to add a new element:</h2>
+        <button id="add-element-button">Add New Element</button>
+    </section>
+
+    <script>
+        // Changing text content dynamically
+        document.getElementById("change-text-button").addEventListener("click", function() {
+            document.getElementById("text-content").textContent = "The text has been changed dynamically using JavaScript!";
+        });
+
+        // Modifying CSS styles via JavaScript
+        document.getElementById("change-style-button").addEventListener("click", function() {
+            const paragraph = document.getElementById("text-content");
+            paragraph.style.color = "blue";
+            paragraph.style.fontSize = "20px";
+            paragraph.style.fontWeight = "bold";
+        });
+
+        // Adding or removing an element when a button is clicked
+        document.getElementById("add-element-button").addEventListener("click", function() {
+            const newElement = document.createElement("p");
+            newElement.textContent = "This is a newly added paragraph element.";
+            document.body.appendChild(newElement);
+        });
+    </script>
+</body>
+</html>
